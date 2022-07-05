@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+	@EnvironmentObject var activityLog: ActivityLog
+	
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+		VStack {
+			DropFileView(activityLog: activityLog)
+			LogActivityView(activityLog: activityLog)
+		}
     }
 }
 

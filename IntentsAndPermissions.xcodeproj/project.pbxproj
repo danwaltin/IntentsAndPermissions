@@ -11,6 +11,9 @@
 		375B3E46287433FB00C0BE9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E45287433FB00C0BE9C /* ContentView.swift */; };
 		375B3E48287433FC00C0BE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375B3E47287433FC00C0BE9C /* Assets.xcassets */; };
 		375B3E4B287433FC00C0BE9C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375B3E4A287433FC00C0BE9C /* Preview Assets.xcassets */; };
+		375B3E532874351100C0BE9C /* ActivityLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E522874351100C0BE9C /* ActivityLog.swift */; };
+		375B3E55287435EE00C0BE9C /* LogActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E54287435EE00C0BE9C /* LogActivityView.swift */; };
+		375B3E572874384100C0BE9C /* DropFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E562874384100C0BE9C /* DropFileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		375B3E47287433FC00C0BE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		375B3E4A287433FC00C0BE9C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		375B3E4C287433FC00C0BE9C /* IntentsAndPermissions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntentsAndPermissions.entitlements; sourceTree = "<group>"; };
+		375B3E522874351100C0BE9C /* ActivityLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLog.swift; sourceTree = "<group>"; };
+		375B3E54287435EE00C0BE9C /* LogActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogActivityView.swift; sourceTree = "<group>"; };
+		375B3E562874384100C0BE9C /* DropFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropFileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 			children = (
 				375B3E43287433FB00C0BE9C /* IntentsAndPermissionsApp.swift */,
 				375B3E45287433FB00C0BE9C /* ContentView.swift */,
+				375B3E54287435EE00C0BE9C /* LogActivityView.swift */,
 				375B3E47287433FC00C0BE9C /* Assets.xcassets */,
 				375B3E4C287433FC00C0BE9C /* IntentsAndPermissions.entitlements */,
 				375B3E49287433FC00C0BE9C /* Preview Content */,
+				375B3E522874351100C0BE9C /* ActivityLog.swift */,
+				375B3E562874384100C0BE9C /* DropFileView.swift */,
 			);
 			path = IntentsAndPermissions;
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375B3E572874384100C0BE9C /* DropFileView.swift in Sources */,
 				375B3E46287433FB00C0BE9C /* ContentView.swift in Sources */,
 				375B3E44287433FB00C0BE9C /* IntentsAndPermissionsApp.swift in Sources */,
+				375B3E55287435EE00C0BE9C /* LogActivityView.swift in Sources */,
+				375B3E532874351100C0BE9C /* ActivityLog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
