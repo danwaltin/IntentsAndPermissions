@@ -36,9 +36,3 @@ struct ActivityItemView: View {
 		}
 	}
 }
-
-struct LogActivityView_Previews: PreviewProvider {
-    static var previews: some View {
-        LogActivityView(activityLog: ActivityLog())
-    }
-}

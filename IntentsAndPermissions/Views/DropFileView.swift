@@ -55,6 +55,5 @@ extension Array where Element == NSItemProvider {
 				
 		return url
 	}
-
 }
 

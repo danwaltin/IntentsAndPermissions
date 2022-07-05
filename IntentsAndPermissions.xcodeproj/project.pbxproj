@@ -60,14 +60,12 @@
 		375B3E42287433FB00C0BE9C /* IntentsAndPermissions */ = {
 			isa = PBXGroup;
 			children = (
+				375B3E5A28744ACA00C0BE9C /* Views */,
 				375B3E43287433FB00C0BE9C /* IntentsAndPermissionsApp.swift */,
-				375B3E45287433FB00C0BE9C /* ContentView.swift */,
-				375B3E54287435EE00C0BE9C /* LogActivityView.swift */,
 				375B3E47287433FC00C0BE9C /* Assets.xcassets */,
 				375B3E4C287433FC00C0BE9C /* IntentsAndPermissions.entitlements */,
 				375B3E49287433FC00C0BE9C /* Preview Content */,
 				375B3E522874351100C0BE9C /* ActivityLog.swift */,
-				375B3E562874384100C0BE9C /* DropFileView.swift */,
 				375B3E582874496A00C0BE9C /* Importer.swift */,
 			);
 			path = IntentsAndPermissions;
@@ -79,6 +77,16 @@
 				375B3E4A287433FC00C0BE9C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		375B3E5A28744ACA00C0BE9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				375B3E45287433FB00C0BE9C /* ContentView.swift */,
+				375B3E54287435EE00C0BE9C /* LogActivityView.swift */,
+				375B3E562874384100C0BE9C /* DropFileView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
