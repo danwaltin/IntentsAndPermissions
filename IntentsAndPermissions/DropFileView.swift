@@ -22,7 +22,17 @@ struct DropFileView: View {
 			.onDrop(of: [UTType.fileURL], isTargeted: $dropTrackAccepted) { providers in
 				
 				Task {
-					activityLog.logInfo("file dropped")
+					let urls = try await providers.urls()
+					activityLog.logInfo("\(urls.count) file(-s) dropped")
+					
+					do {
+						for url in urls {
+							let _ = try Data(contentsOf: url)
+						}
+						activityLog.logInfo("content of files read successfully")
+					} catch {
+						activityLog.logError("failed to read content of files", error: error)
+					}
 				}
 				return true
 			}
