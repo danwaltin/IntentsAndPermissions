@@ -11,7 +11,8 @@ import AVFoundation
 
 struct DropFileView: View {
 	@State var dropTrackAccepted = false
-	@ObservedObject var activityLog: ActivityLog
+	
+	let importer: Importer
 	
     var body: some View {
         Text("Drop a file here!")
@@ -20,19 +21,9 @@ struct DropFileView: View {
 			.border(borderColor, width: borderWidth)
 			.padding()
 			.onDrop(of: [UTType.fileURL], isTargeted: $dropTrackAccepted) { providers in
-				
 				Task {
 					let urls = try await providers.urls()
-					activityLog.logInfo("\(urls.count) file(-s) dropped")
-					
-					do {
-						for url in urls {
-							let _ = try Data(contentsOf: url)
-						}
-						activityLog.logInfo("content of files read successfully")
-					} catch {
-						activityLog.logError("failed to read content of files", error: error)
-					}
+					try importer.importFiles(urls)
 				}
 				return true
 			}
@@ -67,8 +58,3 @@ extension Array where Element == NSItemProvider {
 
 }
 
-struct DropFileView_Previews: PreviewProvider {
-    static var previews: some View {
-        DropFileView(activityLog: ActivityLog())
-    }
-}

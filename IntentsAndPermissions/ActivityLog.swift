@@ -6,23 +6,47 @@
 //
 
 import Foundation
+import SwiftUI
+
+enum ActivityType {
+	case info
+	case error
+
+	func image() -> some View {
+		switch self {
+		case .info:
+			return Image(systemName: "info.circle.fill").foregroundColor(.primary)
+		case .error:
+			return Image(systemName: "xmark.octagon.fill").foregroundColor(.red)
+		}
+	}
+}
 
 struct ActivityItem: Identifiable {
 	let id = UUID()
 	
 	let timestamp: Date
 	let message: String
+	let type: ActivityType
 }
 
 class ActivityLog: ObservableObject {
 	@Published var items = [ActivityItem]()
 	
 	func logInfo(_ message: String) {
-		items.append(.init(timestamp: Date(), message: message))
+		appendItem(.init(timestamp: Date(), message: message, type: .info))
 	}
 	
 	func logError(_ message: String, error: Error) {
-		items.append(.init(timestamp: Date(), message: message))
+		let errorMessage = message + " - " + error.localizedDescription
+		appendItem(.init(timestamp: Date(), message: errorMessage, type: .error))
+	}
+
+	private func appendItem(_ item: ActivityItem) {
+		// Make sure we publish on main thread!
+		DispatchQueue.main.async { [self] in
+			items.append(item)
+		}
 	}
 }
 

@@ -30,7 +30,10 @@ struct ActivityItemView: View {
 	let item: ActivityItem
 
 	var body: some View {
-		Text(item.timestamp.description + " - " + item.message)
+		HStack {
+			item.type.image()
+			Text(item.timestamp.description + " - " + item.message)
+		}
 	}
 }
 

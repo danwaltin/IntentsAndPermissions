@@ -12,14 +12,8 @@ struct ContentView: View {
 	
     var body: some View {
 		VStack {
-			DropFileView(activityLog: activityLog)
+			DropFileView(importer: Importer(activityLog: activityLog))
 			LogActivityView(activityLog: activityLog)
 		}
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
