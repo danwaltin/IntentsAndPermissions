@@ -15,6 +15,7 @@
 		375B3E55287435EE00C0BE9C /* LogActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E54287435EE00C0BE9C /* LogActivityView.swift */; };
 		375B3E572874384100C0BE9C /* DropFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E562874384100C0BE9C /* DropFileView.swift */; };
 		375B3E592874496A00C0BE9C /* Importer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E582874496A00C0BE9C /* Importer.swift */; };
+		375B3E5D28744B5400C0BE9C /* Intents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 375B3E5C28744B5400C0BE9C /* Intents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		375B3E54287435EE00C0BE9C /* LogActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogActivityView.swift; sourceTree = "<group>"; };
 		375B3E562874384100C0BE9C /* DropFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropFileView.swift; sourceTree = "<group>"; };
 		375B3E582874496A00C0BE9C /* Importer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Importer.swift; sourceTree = "<group>"; };
+		375B3E5C28744B5400C0BE9C /* Intents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Intents.intentdefinition; sourceTree = "<group>"; };
+		375B3E5E28744BC300C0BE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		375B3E42287433FB00C0BE9C /* IntentsAndPermissions */ = {
 			isa = PBXGroup;
 			children = (
+				375B3E5E28744BC300C0BE9C /* Info.plist */,
+				375B3E5B28744B4400C0BE9C /* Intents */,
 				375B3E5A28744ACA00C0BE9C /* Views */,
 				375B3E43287433FB00C0BE9C /* IntentsAndPermissionsApp.swift */,
 				375B3E47287433FC00C0BE9C /* Assets.xcassets */,
@@ -87,6 +92,14 @@
 				375B3E562874384100C0BE9C /* DropFileView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		375B3E5B28744B4400C0BE9C /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				375B3E5C28744B5400C0BE9C /* Intents.intentdefinition */,
+			);
+			path = Intents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +172,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				375B3E5D28744B5400C0BE9C /* Intents.intentdefinition in Sources */,
 				375B3E572874384100C0BE9C /* DropFileView.swift in Sources */,
 				375B3E46287433FB00C0BE9C /* ContentView.swift in Sources */,
 				375B3E44287433FB00C0BE9C /* IntentsAndPermissionsApp.swift in Sources */,
@@ -298,6 +312,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntentsAndPermissions/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -325,6 +340,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IntentsAndPermissions/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
