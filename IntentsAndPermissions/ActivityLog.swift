@@ -10,12 +10,15 @@ import SwiftUI
 
 enum ActivityType {
 	case info
+	case warning
 	case error
 
 	func image() -> some View {
 		switch self {
 		case .info:
 			return Image(systemName: "info.circle.fill").foregroundColor(.primary)
+		case .warning:
+			return Image(systemName: "exclamationmark.triangle.fill").foregroundColor(.yellow)
 		case .error:
 			return Image(systemName: "xmark.octagon.fill").foregroundColor(.red)
 		}
@@ -34,16 +37,21 @@ class ActivityLog: ObservableObject {
 	@Published var items = [ActivityItem]()
 	
 	func logInfo(_ message: String) {
-		appendItem(.init(timestamp: Date(), message: message, type: .info))
-	}
-	
-	func logError(_ message: String, error: Error) {
-		let errorMessage = message + " - " + error.localizedDescription
-		appendItem(.init(timestamp: Date(), message: errorMessage, type: .error))
+		log(message, type: .info)
 	}
 
-	private func appendItem(_ item: ActivityItem) {
-		// Make sure we publish on main thread!
+	func logWarning(_ message: String) {
+		log(message, type: .warning)
+	}
+
+	func logError(_ message: String, error: Error) {
+		let errorMessage = message + " - " + error.localizedDescription
+		log(errorMessage, type: .error)
+	}
+
+	private func log(_ message: String, type: ActivityType) {
+		let item = ActivityItem(timestamp: Date(), message: message, type: type)
+
 		DispatchQueue.main.async { [self] in
 			items.append(item)
 		}

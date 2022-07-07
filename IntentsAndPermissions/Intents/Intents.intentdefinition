@@ -25,10 +25,12 @@
 			<string>Importing a file</string>
 			<key>INIntentDescriptionID</key>
 			<string>qTJtjg</string>
+			<key>INIntentIneligibleForSuggestions</key>
+			<true/>
 			<key>INIntentInput</key>
 			<string>path</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>1</integer>
+			<integer>2</integer>
 			<key>INIntentManagedParameterCombinations</key>
 			<dict>
 				<key>path</key>
@@ -45,20 +47,6 @@
 			</dict>
 			<key>INIntentName</key>
 			<string>ImportFile</string>
-			<key>INIntentParameterCombinations</key>
-			<dict>
-				<key>path</key>
-				<dict>
-					<key>INIntentParameterCombinationIsLinked</key>
-					<true/>
-					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
-					<true/>
-					<key>INIntentParameterCombinationTitle</key>
-					<string>Import file from ${path}</string>
-					<key>INIntentParameterCombinationTitleID</key>
-					<string>LD2hOr</string>
-				</dict>
-			</dict>
 			<key>INIntentParameters</key>
 			<array>
 				<dict>
@@ -72,10 +60,15 @@
 					<integer>1</integer>
 					<key>INIntentParameterMetadata</key>
 					<dict>
-						<key>INIntentParameterMetadataCapitalization</key>
-						<string>Sentences</string>
-						<key>INIntentParameterMetadataDefaultValueID</key>
-						<string>rilnWB</string>
+						<key>INIntentParameterMetadataCustomUTIs</key>
+						<array>
+							<dict>
+								<key>UTI</key>
+								<string>public.data</string>
+							</dict>
+						</array>
+						<key>INIntentParameterMetadataType</key>
+						<string>Custom</string>
 					</dict>
 					<key>INIntentParameterName</key>
 					<string>path</string>
@@ -101,9 +94,9 @@
 					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>
-					<integer>1</integer>
+					<integer>2</integer>
 					<key>INIntentParameterType</key>
-					<string>String</string>
+					<string>File</string>
 				</dict>
 			</array>
 			<key>INIntentResponse</key>

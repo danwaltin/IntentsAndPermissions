@@ -7,16 +7,21 @@
 
 import SwiftUI
 
+let globalActivityLog = ActivityLog()
+
 @main
 struct IntentsAndPermissionsApp: App {
-	@StateObject var activityLog = ActivityLog()
+	@NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
 	var body: some Scene {
 		
         WindowGroup {
             ContentView()
 				.frame(minWidth: 400, minHeight: 300)
-				.environmentObject(activityLog)
+				.environmentObject(globalActivityLog)
 		}
     }
+}
+
+class AppDelegate: NSObject, NSApplicationDelegate {
 }
